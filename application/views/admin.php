@@ -118,6 +118,7 @@
                                                     <div class="row">
                                                         <div class="col s12 mt-20">
                                                             <button class="btn-large btn-add waves-effect waves-light" type="submit" name="action">Update</button>
+                                                            <a href="<?= site_url('admin/delete/' . $burung->id_burung) ?>" class="btn-large btn-delete waves-effect waves-light" type="submit" name="action">Delete</a>
                                                         </div>
                                                     </div>
                                                 </form>
@@ -135,7 +136,7 @@
                                                     <div class="row mb-0">
                                                         <div class="input-field col s3">
                                                             <input id="usia_burung<?= $burung->id_burung ?>" name="usia_burung" type="number" class="validate">
-                                                            <label for="usia_burung<?= $burung->id_burung ?>">Usia Burung</label>
+                                                            <label for="usia_burung<?= $burung->id_burung ?>">Usia Burung (Dalam Bulan)</label>
                                                             <div class="red-text"><?= form_error('usia_burung'); ?></div>
                                                         </div>
                                                         <div class="input-field col s3">
@@ -158,7 +159,7 @@
                                                     <div class="col m12">
                                                         <table class="centered highlight">
                                                             <thead>
-                                                                <td class="center">Id</td>
+                                                                <!-- <td class="center">Id</td> -->
                                                                 <td class="center">Usia</td>
                                                                 <td class="center">Stok</td>
                                                                 <td class="center">Harga</td>
@@ -170,7 +171,7 @@
                                                                     <?php if ($detail['fk_burung'] == $burung->id_burung) { ?>
                                                                         <form class="col s12" action="<?php echo site_url('admin/uploadManyImage/' . $detail['id_detail_burung']) ?>" method="post" enctype="multipart/form-data">
                                                                             <tr>
-                                                                                <td><?= $detail['id_detail_burung'] ?></td>
+                                                                                <!-- <td><?= $detail['id_detail_burung'] ?></td> -->
                                                                                 <td><?= $detail['usia_burung'] ?> Bulan</td>
                                                                                 <td><?= $detail['stok_burung'] ?></td>
                                                                                 <td>Rp. <?= number_format($detail['harga_burung'], 2) ?></td>
@@ -190,7 +191,7 @@
                                                                                 <td>
                                                                                     <button class="btn-small btn-add waves-effect waves-light" type="submit" name="action">Go</button>
                                                                                     <a class="btn-small waves-orange btn-Update modal-trigger" href="#modal<?= $detail['id_detail_burung'] ?>"><i class="fas fa-edit"></i></a>
-                                                                                    <button class="btn-small btn-delete waves-effect waves-light" type="submit" name="action">Delete</button>
+                                                                                    <a class="btn-small btn-delete waves-effect waves-light" href="<?= site_url('admin/deleteDetail/' . $detail['id_detail_burung']) ?>">Delete</a>
                                                                                 </td>
                                                                             </tr>
                                                                         </form>

@@ -1,6 +1,6 @@
 <?php $this->load->view('components/script'); ?>
 <div class="grass-white-bottom"></div>
-<footer class="page-footer">
+<!-- <footer class="page-footer">
 	<div class="container">
 		<div class="row">
 			<div class="col l10 s12">
@@ -46,4 +46,4 @@
 			© 2020 Team Birdie
 		</div>
 	</div>
-</footer>
+</footer> -->

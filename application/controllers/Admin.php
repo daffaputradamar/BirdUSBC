@@ -68,7 +68,8 @@ class Admin extends CI_Controller
       'allowed_types' => '*',
       'max_size' => 50901730,
       'overwrite' => TRUE,
-      'remove_spaces' => TRUE
+      'remove_spaces' => TRUE,
+      'encrypt_name' => TRUE
     );
     return $config;
   }
@@ -243,7 +244,7 @@ class Admin extends CI_Controller
     );
 
     if ($this->form_validation->run() === false) {
-      $this->load->view('admin');
+      redirect('admin/');
     } else {
       return true;
     }
@@ -271,7 +272,7 @@ class Admin extends CI_Controller
     );
 
     if ($this->form_validation->run() === false) {
-      $this->load->view('admin');
+      redirect('admin/');
     } else {
       return true;
     }
@@ -315,6 +316,16 @@ class Admin extends CI_Controller
     );
     $this->Detail_model->updateData($data, $id);
     $this->session->set_flashdata('success', 'Berhasil disimpan');
+    redirect('admin/');
+  }
+
+  public function deleteDetail()
+  {
+    $data = array(
+      'id_detail_burung' => $this->uri->segment(3)
+    );
+    $this->Detail_model->deleteData($data);
+    $this->session->set_flashdata('success', 'Berhasil dihapus');
     redirect('admin/');
   }
 
