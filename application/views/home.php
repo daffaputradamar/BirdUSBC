@@ -158,7 +158,8 @@
 		</div>
 		<div class="row container">
 			<div class="col l7">
-				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.6473114736878!2d112.75551831472269!3d-7.28090999474476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fbcc0f52cd57%3A0xd814e67302d5ba0a!2sJl.%20Manyar%20Sambongan%20No.27%2C%20RT.002%2FRW.10%2C%20Kertajaya%2C%20Kec.%20Gubeng%2C%20Kota%20SBY%2C%20Jawa%20Timur%2060282!5e0!3m2!1sen!2sid!4v1574744622956!5m2!1sen!2sid" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+				<!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.6473114736878!2d112.75551831472269!3d-7.28090999474476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fbcc0f52cd57%3A0xd814e67302d5ba0a!2sJl.%20Manyar%20Sambongan%20No.27%2C%20RT.002%2FRW.10%2C%20Kertajaya%2C%20Kec.%20Gubeng%2C%20Kota%20SBY%2C%20Jawa%20Timur%2060282!5e0!3m2!1sen!2sid!4v1574744622956!5m2!1sen!2sid" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe> -->
+				<iframe src="https://www.google.com/maps/d/embed?mid=1MtzkdcMs_pChMkasMWzH0f_wKq0&hl=en" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
 			</div>
 			<div class="col l5" style="margin-bottom: 70px;">
 				<ul class="left ml-95 blurie-text" style="margin-top: 0%;">
@@ -166,22 +167,22 @@
 						<p style="margin-top: 0%;">
 							<i class="fas fa-map-marked-alt mr-10 mb-8" style="font-size: 20px; font-weight: bold;"></i>
 							<strong style="font-size: 20px;">Alamat</strong><br>
-							Jl. Manyar Sambongan 27, Surabaya.<br>
-							<b>Kelurahan Kertajaya, Kecamatan Gubeng</b>
+							Jl. Soekarno Hatta No 09. Malang 65141<br>
+							<!-- <b>Kelurahan Kertajaya, Kecamatan Gubeng</b> -->
 						</p>
 					</li>
 					<li class="mb-35">
 						<p>
 							<i class="fas fa-phone-alt mr-10 mb-8" style="font-size: 20px; font-weight: bold;"></i>
 							<strong style="font-size: 20px;">Telepon</strong><br>
-							USBC : 031-5024143
+							(0341) 404424
 						</p>
 					</li>
 					<li class="mb-35">
 						<p>
 							<i class="fas fa-envelope mr-10 mb-8" style="font-size: 20px; font-weight: bold;"></i>
 							<strong style="font-size: 20px;">Email</strong><br>
-							<a style="font-style: none !important; color:black;" href="mailto:usbc_bird@rocketmail.com">usbc_bird@rocketmail.com</a>
+							<a style="font-style: none !important; color:black;" href="mailto:info@polinema.ac.id">info@polinema.ac.id</a>
 						</p>
 					</li>
 				</ul>
@@ -189,7 +190,6 @@
 		</div>
 	</div>
 	<?php $this->load->view('components/footer'); ?>
-	<?php $this->load->view('components/tawk'); ?>
 	<?php if ($this->session->userdata('logged_in') === true) {
 		$this->load->view('components/chat_wa');
 	} ?>
